@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+  
+    "name": "PSA-A2J Lab",
+    "short_name": "PSA-A2J Lab",
+    "author": "Matthew Stubenberg",
+    "description": "For facilitating the transfer of QAs and PSAs to Judges in SLC",
+    "version": "1.0",
+    "background": {
+     "js": ["/bootstrap/js/jquery.js"],
+      "scripts":["/bootstrap/js/jquery.js","refreshAT.js"]
+    },
+    "content_scripts": [{
+         "js": ["/bootstrap/js/jquery.js"],
+         "matches": ["https://localhost/*"]
+       }],
+    "browser_action": {
+     "default_icon": "images/a2j16.png",
+     "default_popup": "popup.html"
+    },
+    "icons": { "16": "images/a2j16.png",
+             "48": "images/a2jlab48.png",
+            "128": "images/a2jlab128.png" },
+    "permissions": [
+      "activeTab",
+      "https://*/",
+      "http://*/",
+        "storage",
+        "notifications",
+        "tabs"
+      ]
+  }
